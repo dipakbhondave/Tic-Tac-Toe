@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #1e1e2e, #3a3a52);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Title Styling */
+h1 {
+    color: #f1c40f; /* Gold Color */
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 10px rgba(255, 215, 0, 0.6);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Game Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Game Board */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    
+    width: 100%;
+    max-width: 320px;
+}
+
+/* Box Styling */
+.box {
+    height: 14vmin;
+    width: 14vmin;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    font-size: 8vmin;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(255, 215, 0, 0.6);
+}
+
+/* X and O Colors */
+.box.X {
+    color: #e74c3c; /* Red */
+    text-shadow: 3px 3px 10px rgba(231, 76, 60, 0.8);
+}
+
+.box.O {
+    color: #f1c40f; /* Gold */
+    
+}
+
+/* Box Hover */
+.box:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.07);
+}
+
+/* Buttons */
+button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(to right, #f1c40f, #d4af37);
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 7rem;
+    align-items: center;
+    
+}
+
+button:hover {
+    transform: scale(1.1);
+    
+}
+
+/* Message Container */
+.msg-container {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(230, 177, 6, 0.8);
+    border-radius: 12px;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+/* Winning Line */
+.winning-line {
+    position: absolute;
+    height: 6px;
+    background: #f1c40f;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hide Elements */
+.hide {
+    display: none;
+}
+
+/* 📱 Mobile Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .game {
+        max-width: 280px;
+        gap: 6px;
+    }
+
+    .box {
+        height: 16vmin;
+        width: 16vmin;
+        font-size: 7vmin;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+/* Centering the Buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;  /* Aligns buttons horizontally */
+    gap: 15px;  /* Adds space between buttons */
+    margin-top: 20px;
+}
+
+button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(to right, #f1c40f, #d4af37);
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 8rem;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
