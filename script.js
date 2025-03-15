@@ -10,10 +10,10 @@ let turnO = true; // 'O' starts first
 let gameActive = true;
 
 // Sounds (Ensure files exist in the correct directory)
-let clickSound = new Audio("sounds/click.mp3");
-let winSound = new Audio("sounds/win.mp3");
-let drawSound = new Audio("sounds/Draw.mp3");
-let winningSong = new Audio("sounds/Winner.mp3");
+let clickSound = new Audio("Sounds/click.mp3");
+let winSound = new Audio("Sounds/win.mp3");
+let drawSound = new Audio("Sounds/Draw.mp3");
+let winningSong = new Audio("Sounds/Winner.mp3");
 
 // Dynamically generate win patterns for any board size
 const generateWinPatterns = (size) => {
